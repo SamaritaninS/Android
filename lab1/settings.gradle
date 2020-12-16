@@ -1,3 +1,0 @@
-include ':myapplication'
-include ':app'
-rootProject.name = "lab1"
