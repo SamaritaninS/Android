@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer</string>
+    <string name="home_page">Домашняя страница</string>
+    <string name="timer_page">Страница таймера</string>
+    <string name="edit_page">Страница изменений</string>
+    <string name="settings_page">Страница настроек</string>
+    <string name="preparation">Подготовка</string>
+    <string name="warm_up">Разминка</string>
+    <string name="work">Работа</string>
+    <string name="relaxation">Отдых</string>
+    <string name="cycle">Циклы</string>
+    <string name="set">Повторения</string>
+    <string name="pause">Пауза</string>
+    <string name="name">Имя : </string>
+    <string name="preparationT">Подготовка : </string>
+    <string name="warm_upT">Разминка : </string>
+    <string name="workT">Работа : </string>
+    <string name="relaxationT">Отдых : </string>
+    <string name="cycleT">Циклы : </string>
+    <string name="setT">Повторения : </string>
+    <string name="pauseT">Пауза : </string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="button_clear">Удалить</string>
+    <string name="button_add">Добавть</string>
+    <string name="settings">Настройки</string>
+    <string name="textview_lg">Смена яызка</string>
+    <string name="textview_cl">Удалить таймеры</string>
+    <string name="select">Выберите действие</string>
+    <string name="view_timer">Просмот таймера</string>
+    <string name="edit_timer">Изменениие таймера</string>
+    <string name="delete_timer">Удаление таймера</string>
+    <string name="delete_ok">. Вы уверены, что хотите удалить?</string>
+    <string name="language_selection">Смена языка</string>
+    <string name="font_settings">Настройки шрифта</string>
+    <string name="change_theme">Смена темы</string>
+    <string name="delete_timers">Удалить таймеры</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="select_value">Выберите нужное значение</string>
+</resources>

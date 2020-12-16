@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/name"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:id="@+id/textview_name_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textview_preparation"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/preparationT"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:id="@+id/textview_preparation_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_warm_up"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="@string/warm_upT"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textview_warm_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_work"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="@string/workT"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:id="@+id/textview_work_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_relaxation"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="@string/relaxationT"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textview_relaxation_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_cycle"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="@string/cycleT"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textview_cycle_db"
+                android:layout_width="207dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_set"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="@string/setT"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textview_set_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_pause"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="@string/pauseT"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textview_pause_db"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:textSize="36sp" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

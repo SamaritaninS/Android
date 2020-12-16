@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/preference_screen">
+    <PreferenceCategory
+        android:title="@string/settings">
+        <ListPreference
+            android:key="language"
+            android:title="@string/language_selection"
+            android:defaultValue="1"
+            android:entries="@array/spinner_language"
+            android:entryValues="@array/lg_value"
+            android:dialogTitle="@string/language_selection" />
+        <ListPreference
+            android:key="theme"
+            android:title="@string/change_theme"
+            android:defaultValue="1"
+            android:entries="@array/spinner_theme"
+            android:entryValues="@array/th_value"
+            android:dialogTitle="@string/change_theme" />
+        <com.example.timer.SplashScreen.SeekBarDialogPreference
+            android:defaultValue="15"
+            android:dialogMessage="@string/select_value"
+            android:key="size"
+            android:max="20"
+            android:title="@string/font_settings"
+            custom:min="10"
+            android:dialogTitle="" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,30 @@
+<resources>
+    <style name="AppThemeLite" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorYellow</item>
+        <item name="colorPrimaryDark">@color/colorYellow</item>
+        <item name="colorAccent">@color/colorYellow</item>
+        <item name="android:colorBackground">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="colorButtonNormal">@color/colorYellow</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorBlack</item>
+        <item name="android:colorBackground">@color/colorGrey</item>
+        <item name="android:textColor">#F3950B</item>
+        <item name="colorButtonNormal">@color/colorBlack</item>
+        <item name="actionMenuTextColor">@color/colorBlack</item>
+    </style>
+
+    <style name="TinySizeStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="MiddleSizeStyle">
+        <item name="android:textSize">21sp</item>
+    </style>
+    <style name="BigSizeStyle">
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>

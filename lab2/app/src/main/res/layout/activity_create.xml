@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPage.CreateActivity">
+
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/name"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="337dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="text"
+                android:autofillHints="" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_preparation"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/preparation"
+            android:textSize="20sp" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/shaktiman_superhero_human" />
+
+
+            <EditText
+                android:id="@+id/edit_preparation"
+                android:layout_width="337dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:autofillHints="" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_warm_up"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="@string/warm_up"
+            android:textSize="20sp" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/run" />
+
+            <EditText
+                android:id="@+id/edit_warm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_work"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="@string/work"
+            android:textSize="20sp" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/exercise_sport_13306" />
+
+
+            <EditText
+                android:id="@+id/edit_work"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:autofillHints="" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_relaxation"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="@string/relaxation"
+            android:textSize="20sp" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/preparation" />
+
+            <EditText
+                android:id="@+id/edit_relaxation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberSigned" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_cycle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="@string/cycle"
+            android:textSize="20sp" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cycle_38373" />
+
+            <EditText
+                android:id="@+id/edit_cycle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberSigned" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_set"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="@string/set"
+            android:textSize="20sp" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/set_timer" />
+
+            <EditText
+                android:id="@+id/edit_set"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberSigned" />
+        </TableRow>
+        <TextView
+            android:id="@+id/textview_pause"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:text="@string/pause"
+            android:textSize="20sp" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/chair" />
+
+            <EditText
+                android:id="@+id/edit_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="numberSigned" />
+        </TableRow>
+        <GridView
+            android:id="@+id/palletGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:columnWidth="45dp"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="5dp" />
+        <Button
+            android:id="@+id/button_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply" />
+    </TableLayout>
+</ScrollView>
