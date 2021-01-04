@@ -8,8 +8,8 @@ android {
         applicationId "com.example.lab1"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode generateVersionCode(versionArray)
+        versionName "${versionArray[0]}.${versionArray[1]}.${versionArray[2]}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
