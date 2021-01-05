@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        relase {
+            storeFile file('C:\\Users\\User\\Adroid\\keys.jks')
+            storePassword '1234Qwer'
+            keyAlias 'release'
+            keyPassword '1234Qwer'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
