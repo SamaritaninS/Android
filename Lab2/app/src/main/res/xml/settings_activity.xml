@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent">
+    <ListPreference
+        android:defaultValue="1"
+        android:dialogTitle="@string/Selectalanguage"
+        android:entries="@array/Language_Name"
+        android:entryValues="@array/Language_Name"
+        android:key="test_lang"
+        android:summary="@string/Languageintheapp"
+        android:title="@string/Language" />
+    <ListPreference
+        android:key="fontSize"
+        android:title="@string/Fontstyle"
+        android:summary="@string/Setsthefontstyle"
+        android:entries="@array/Font_Style"
+        android:entryValues="@array/Font_Style"
+        android:dialogTitle="@string/Chooseafontstyle" />
+    <SwitchPreference
+        android:key="theme"
+        android:summaryOff="@string/NightTheme"
+        android:summaryOn="@string/NightTheme"
+        android:switchTextOff="@string/ON"
+        android:switchTextOn="@string/OFF" />
+    <Preference
+        android:title="@string/Delete"
+        android:key="DeleteAll"
+        android:summary="@string/DeleteAll"
+        />
+</PreferenceScreen>

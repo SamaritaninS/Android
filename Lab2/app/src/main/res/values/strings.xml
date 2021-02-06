@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Lab2</string>
+    <string name="Add_new">+</string>
+    <string name="Prepair">Подготовка</string>
+    <string name="Start">Старт</string>
+    <string name="Pause">Пауза</string>
+    <string name="Final">Конец</string>
+    <string name="Calm">Перерыв</string>
+    <string name="Name">Название</string>
+    <string name="Cycle">Подходы</string>
+    <string name="Sleep">Остановиться</string>
+    <string name="RestBTW">Перерыв между подходами</string>
+    <string name="Exit">Вы хотите выйти?</string>
+    <string name="Cancel">Вы хотите отменить действие?</string>
+    <string name="SaveMess">Сохранить изменения?</string>
+    <string name="Save">Сохранить</string>
+    <string name="Return">Отмена</string>
+    <string name="Yes">Да</string>
+    <string name="No">Нет</string>
+    <string name="Training">Тренировка</string>
+    <string name="Minus">-</string>
+    <string name="Preferences">Свойства</string>
+    <string name="Fontstyle">Стиль шрифта</string>
+    <string name="Setsthefontstyle">Установка стиля шрифта</string>
+    <string name="Chooseafontstyle">Выбор стиля шрифта</string>
+    <string name="Selectalanguage">Выбор языка</string>
+    <string name="Languageintheapp">Текущий язык</string>
+    <string name="Language">Язык</string>
+    <string name="NightTheme">Ночная тема</string>
+    <string name="ON">Включить</string>
+    <string name="OFF">Включить</string>
+    <string name="Delete">Удалить</string>
+    <string name="DeleteAll">Удалить все </string>
+    <string name="Finish">Конец тренировки</string>
+    <string name="Time">ВРЕМЯ</string>
+    <string name="Stage">СТАДИЯ</string>
+    <string name="Plus">+</string>
+    <string-array name="Language_Name">
+        <item>Английский</item>
+        <item>Русский</item>
+    </string-array>
+    <string-array name="Font_Style">
+        <item>Средний</item>
+        <item>Увеличенный</item>
+    </string-array>
+</resources>

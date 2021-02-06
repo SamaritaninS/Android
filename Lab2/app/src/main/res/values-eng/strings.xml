@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lab2</string>
+    <string name="Add_new">+</string>
+    <string name="Prepair">Prepair</string>
+    <string name="Start">Start</string>
+    <string name="Pause">Pause</string>
+    <string name="Final">Finish</string>
+    <string name="Calm">Relax</string>
+    <string name="Name">Name</string>
+    <string name="Cycle">Cycle</string>
+    <string name="Sleep">Break</string>
+    <string name="RestBTW">Relax betweеn cycles</string>
+    <string name="Exit">Are u want exit?</string>
+    <string name="Cancel">Cancel?</string>
+    <string name="SaveMess">Save changes?</string>
+    <string name="Save">Save</string>
+    <string name="Return">Return</string>
+    <string name="Yes">Yep</string>
+    <string name="No">No</string>
+    <string name="Training">Training</string>
+    <string name="Minus">-</string>
+    <string name="Preferences">Properties</string>
+    <string name="Fontstyle">Font Style</string>
+    <string name="Setsthefontstyle">Set font style</string>
+    <string name="Chooseafontstyle">Choose font style</string>
+    <string name="Selectalanguage">Choose language</string>
+    <string name="Languageintheapp">Current language</string>
+    <string name="Language">Language</string>
+    <string name="NightTheme">Dark theme</string>
+    <string name="ON">ON</string>
+    <string name="OFF">OFF</string>
+    <string name="Delete">Delete</string>
+    <string name="DeleteAll">Delete all</string>
+    <string name="Finish">End of training</string>
+    <string name="Time">TIME</string>
+    <string name="Stage">STAGE</string>
+    <string name="Plus">+</string>
+    <string-array name="Language_Name">
+        <item>English</item>
+        <item>Russian</item>
+    </string-array>
+    <string-array name="Font_Style">
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+</resources>
