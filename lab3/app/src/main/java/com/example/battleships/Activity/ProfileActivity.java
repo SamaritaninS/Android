@@ -66,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
         gamesText.setText(User.Games);
 
 
-        Picasso.get().load(Uri.parse(User.Image)).into(imageView);
+        Picasso.get().load(User.Image).into(imageView);
 
         nameChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override

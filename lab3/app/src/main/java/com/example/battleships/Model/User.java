@@ -9,13 +9,13 @@ public class User {
     public static String Image;
     public static String Games;
     public static String Wins;
-    public static String Role;
+    public static String Rank;
     public static String Id;
-    public static String Action;
+    public static String Status;
     public static String EnemyName;
     public static String EnemyImage;
-    public static String EnemyRole;
-    public static String EnemyAction;
+    public static String EnemyRank;
+    public static String EnemyStatus;
 
     public User(String name, String email, String password, String image, String games, String wins) {
         Name = name;
