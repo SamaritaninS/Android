@@ -18,6 +18,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.timgroup.jgravatar.Gravatar;
+import com.timgroup.jgravatar.GravatarDefaultImage;
+import com.timgroup.jgravatar.GravatarRating;
 
 import java.util.ArrayList;
 
@@ -183,10 +186,15 @@ public class BattleViewModel extends ViewModel {
     public void fillOpponent(TextView opponentName, ImageView enemyImage){
         if(!User.EnemyName.equals("")){
             opponentName.setText(User.EnemyName);
-            if(User.EnemyImage != null)
-            {
-                Picasso.get().load(Uri.parse(User.EnemyImage)).into(enemyImage);
-            }
+
+            Gravatar gravatar = new Gravatar();
+            gravatar.setSize(50);
+            gravatar.setRating(GravatarRating.GENERAL_AUDIENCES);
+            gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
+            String url = gravatar.getUrl(User.EnemyEmail);
+            url = new StringBuffer(url).insert(4, "s").toString();
+
+            Picasso.get().load(url).into(enemyImage);
         }
     }
 
@@ -198,7 +206,7 @@ public class BattleViewModel extends ViewModel {
                 opponentData();
                 User.EnemyStatus = snapshot.child("action").getValue(String.class);
                 User.EnemyName = snapshot.child("name").getValue(String.class);
-                User.EnemyImage = snapshot.child("image").getValue(String.class);
+                User.EnemyEmail = snapshot.child("email").getValue(String.class);
                 if(User.EnemyStatus.equals("notReady")){
                     fillOpponent(enemyName, enemyImage);
                 }else if(User.EnemyStatus.equals("won")){

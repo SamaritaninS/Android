@@ -13,6 +13,7 @@ public class User {
     public static String Id;
     public static String Status;
     public static String EnemyName;
+    public static String EnemyEmail;
     public static String EnemyImage;
     public static String EnemyRank;
     public static String EnemyStatus;

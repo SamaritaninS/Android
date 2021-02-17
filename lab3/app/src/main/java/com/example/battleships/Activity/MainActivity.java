@@ -63,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
                 User.EnemyName = "";
                 reference.child(User.Id).child("id").setValue(User.Id);
                 reference.child(User.Id).child(User.Rank).child("name").setValue(User.Name);
+                reference.child(User.Id).child(User.Rank).child("email").setValue(User.Email);
                 reference.child(User.Id).child(User.Rank).child("action").setValue(User.Status);
-                reference.child(User.Id).child(User.Rank).child("image").setValue(User.Image);
+                //reference.child(User.Id).child(User.Rank).child("image").setValue(User.Image);
                 reference.child(User.Id).child(User.EnemyRank).child("action").setValue("a");
                 Intent intent = new Intent(getApplicationContext(), BattleActivity.class);
                 startActivity(intent);
@@ -86,10 +87,12 @@ public class MainActivity extends AppCompatActivity {
                             User.EnemyRank = "creator";
                             User.Status = "notReady";
                             User.EnemyName = dataSnapshot.child(input).child("creator").child("name").getValue(String.class);
-                            User.EnemyImage = dataSnapshot.child(input).child("creator").child("image").getValue(String.class);
+                            User.EnemyEmail = dataSnapshot.child(input).child("creator").child("email").getValue(String.class);
+                            //User.EnemyImage = dataSnapshot.child(input).child("creator").child("image").getValue(String.class);
                             User.Id = dataSnapshot.child(input).child("id").getValue(String.class);
-                            reference.child(input).child(User.Rank).child("image").setValue(User.Image);
+                            //reference.child(input).child(User.Rank).child("image").setValue(User.Image);
                             reference.child(input).child(User.Rank).child("name").setValue(User.Name);
+                            reference.child(input).child(User.Rank).child("email").setValue(User.Email);
                             reference.child(input).child(User.Rank).child("action").setValue(User.Status);
                             Intent intent = new Intent(getApplicationContext(), BattleActivity.class);
                             startActivity(intent);

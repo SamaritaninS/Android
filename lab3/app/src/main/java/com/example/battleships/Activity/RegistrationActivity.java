@@ -12,6 +12,9 @@ import com.example.battleships.Model.User;
 import com.example.battleships.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.timgroup.jgravatar.Gravatar;
+import com.timgroup.jgravatar.GravatarDefaultImage;
+import com.timgroup.jgravatar.GravatarRating;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -46,7 +49,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 String inputPassword = passwordEdit.getText().toString();
                 reference.child(inputEmail).child("name").setValue(inputName);
                 reference.child(inputEmail).child("email").setValue(inputEmail);
-                reference.child(inputEmail).child("image").setValue("https://firebasestorage.googleapis.com/v0/b/battleships-f50de.appspot.com/o/uploads%2Fdefault.jpg?alt=media&token=00d3b70b-8b7d-4343-95b3-e755d676dba4");
+                //reference.child(inputEmail).child("image").setValue("https://firebasestorage.googleapis.com/v0/b/battleships-f50de.appspot.com/o/uploads%2Fdefault.jpg?alt=media&token=00d3b70b-8b7d-4343-95b3-e755d676dba4");
                 reference.child(inputEmail).child("password").setValue(inputPassword);
                 reference.child(inputEmail).child("statistics").child("wins").setValue("0");
                 reference.child(inputEmail).child("statistics").child("games").setValue("0");

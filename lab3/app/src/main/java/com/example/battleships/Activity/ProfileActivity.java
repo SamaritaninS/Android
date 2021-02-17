@@ -28,6 +28,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+import com.timgroup.jgravatar.Gravatar;
+import com.timgroup.jgravatar.GravatarDefaultImage;
+import com.timgroup.jgravatar.GravatarRating;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -65,8 +68,15 @@ public class ProfileActivity extends AppCompatActivity {
         winsText.setText(User.Wins);
         gamesText.setText(User.Games);
 
+        Gravatar gravatar = new Gravatar();
+        gravatar.setSize(50);
+        gravatar.setRating(GravatarRating.GENERAL_AUDIENCES);
+        gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
+        String url = gravatar.getUrl(User.Email);
+        url = new StringBuffer(url).insert(4, "s").toString();
+        Picasso.get().load(url).into(imageView);
 
-        Picasso.get().load(User.Image).into(imageView);
+        //Picasso.get().load(User.Image).into(imageView);
 
         nameChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +87,7 @@ public class ProfileActivity extends AppCompatActivity {
                     User.Name=newNameEdit.getText().toString();
                     reference.child(newNameEdit.getText().toString()).child("name").setValue(User.Name);
                     reference.child(newNameEdit.getText().toString()).child("email").setValue(User.Email);
-                    reference.child(newNameEdit.getText().toString()).child("image").setValue(User.Image);
+                    //reference.child(newNameEdit.getText().toString()).child("image").setValue(User.Image);
                     reference.child(newNameEdit.getText().toString()).child("password").setValue(User.Password);
                     reference.child(newNameEdit.getText().toString()).child("statistics").child("games").setValue(User.Games);
                     reference.child(newNameEdit.getText().toString()).child("statistics").child("wins").setValue(User.Wins);
