@@ -36,7 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     FirebaseDatabase db = FirebaseDatabase.getInstance("https://battleships-f50de-default-rtdb.firebaseio.com/");
     DatabaseReference reference = db.getReference("Users");
-    Button imageChangeButton, nameChangeButton, saveAllButton;
+    Button imageChangeButton, nameChangeButton, saveAllButton, gravatarButton, avatarButton;
     EditText newNameEdit;
     TextView emailText, winsText, gamesText;
     ImageView imageView;
@@ -52,6 +52,8 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         imageChangeButton = findViewById(R.id.imageChangeButton);
+        gravatarButton = findViewById(R.id.gravatarButton);
+        avatarButton = findViewById(R.id.avatarButton);
         nameChangeButton = findViewById(R.id.nameChangeButton);
         saveAllButton = findViewById(R.id.saveAllButton);
         newNameEdit = findViewById(R.id.newNameEdit);
@@ -68,16 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
         winsText.setText(User.Wins);
         gamesText.setText(User.Games);
 
-        Gravatar gravatar = new Gravatar();
-        gravatar.setSize(50);
-        gravatar.setRating(GravatarRating.GENERAL_AUDIENCES);
-        gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
-        String url = gravatar.getUrl(User.Email);
-        url = new StringBuffer(url).insert(4, "s").toString();
-        Picasso.get().load(url).into(imageView);
-
-        //Picasso.get().load(User.Image).into(imageView);
-
+        
         nameChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +80,7 @@ public class ProfileActivity extends AppCompatActivity {
                     User.Name=newNameEdit.getText().toString();
                     reference.child(newNameEdit.getText().toString()).child("name").setValue(User.Name);
                     reference.child(newNameEdit.getText().toString()).child("email").setValue(User.Email);
-                    //reference.child(newNameEdit.getText().toString()).child("image").setValue(User.Image);
+                    reference.child(newNameEdit.getText().toString()).child("image").setValue(User.Image);
                     reference.child(newNameEdit.getText().toString()).child("password").setValue(User.Password);
                     reference.child(newNameEdit.getText().toString()).child("statistics").child("games").setValue(User.Games);
                     reference.child(newNameEdit.getText().toString()).child("statistics").child("wins").setValue(User.Wins);
@@ -101,6 +94,26 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 openFileFolder();
+            }
+        });
+
+        gravatarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gravatar gravatar = new Gravatar();
+                gravatar.setSize(50);
+                gravatar.setRating(GravatarRating.GENERAL_AUDIENCES);
+                gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
+                String url = gravatar.getUrl(User.Email);
+                url = new StringBuffer(url).insert(4, "s").toString();
+                Picasso.get().load(url).into(imageView);
+            }
+        });
+
+        avatarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Picasso.get().load(User.Image).into(imageView);
             }
         });
 
