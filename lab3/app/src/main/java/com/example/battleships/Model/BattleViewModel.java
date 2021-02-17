@@ -193,8 +193,10 @@ public class BattleViewModel extends ViewModel {
             gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
             String url = gravatar.getUrl(User.EnemyEmail);
             url = new StringBuffer(url).insert(4, "s").toString();
-
-            Picasso.get().load(url).into(enemyImage);
+            if(User.ImageType.equals("gravatar"))
+                Picasso.get().load(url).into(enemyImage);
+            else
+                Picasso.get().load(User.Image).into(enemyImage);
         }
     }
 

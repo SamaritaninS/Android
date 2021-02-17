@@ -36,7 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     FirebaseDatabase db = FirebaseDatabase.getInstance("https://battleships-f50de-default-rtdb.firebaseio.com/");
     DatabaseReference reference = db.getReference("Users");
-    Button imageChangeButton, nameChangeButton, saveAllButton, gravatarButton, avatarButton;
+    Button imageChangeButton, nameChangeButton, saveAllButton, gravatarButton;
     EditText newNameEdit;
     TextView emailText, winsText, gamesText;
     ImageView imageView;
@@ -53,7 +53,6 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         imageChangeButton = findViewById(R.id.imageChangeButton);
         gravatarButton = findViewById(R.id.gravatarButton);
-        avatarButton = findViewById(R.id.avatarButton);
         nameChangeButton = findViewById(R.id.nameChangeButton);
         saveAllButton = findViewById(R.id.saveAllButton);
         newNameEdit = findViewById(R.id.newNameEdit);
@@ -70,7 +69,19 @@ public class ProfileActivity extends AppCompatActivity {
         winsText.setText(User.Wins);
         gamesText.setText(User.Games);
 
-        
+        if(User.ImageType.equals("gravatar"))
+            imageChangeButton.setVisibility(View.GONE);
+            Gravatar gravatar = new Gravatar();
+            gravatar.setSize(50);
+            gravatar.setRating(GravatarRating.GENERAL_AUDIENCES);
+            gravatar.setDefaultImage(GravatarDefaultImage.IDENTICON);
+            String url = gravatar.getUrl(User.Email);
+            url = new StringBuffer(url).insert(4, "s").toString();
+            Picasso.get().load(url).into(imageView);
+        if(User.ImageType.equals("avatar"))
+            gravatarButton.setVisibility(View.GONE);
+            Picasso.get().load(User.Image).into(imageView);
+
         nameChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,6 +92,7 @@ public class ProfileActivity extends AppCompatActivity {
                     reference.child(newNameEdit.getText().toString()).child("name").setValue(User.Name);
                     reference.child(newNameEdit.getText().toString()).child("email").setValue(User.Email);
                     reference.child(newNameEdit.getText().toString()).child("image").setValue(User.Image);
+                    reference.child(newNameEdit.getText().toString()).child("imageType").setValue(User.ImageType);
                     reference.child(newNameEdit.getText().toString()).child("password").setValue(User.Password);
                     reference.child(newNameEdit.getText().toString()).child("statistics").child("games").setValue(User.Games);
                     reference.child(newNameEdit.getText().toString()).child("statistics").child("wins").setValue(User.Wins);
@@ -107,15 +119,12 @@ public class ProfileActivity extends AppCompatActivity {
                 String url = gravatar.getUrl(User.Email);
                 url = new StringBuffer(url).insert(4, "s").toString();
                 Picasso.get().load(url).into(imageView);
+                User.ImageType = "gravatar";
+                reference.child(User.Name).child("image").setValue(User.Image );
             }
         });
 
-        avatarButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Picasso.get().load(User.Image).into(imageView);
-            }
-        });
+
 
         saveAllButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,7 +173,9 @@ public class ProfileActivity extends AppCompatActivity {
                             Uri url = uri.getResult();
 
                             User.Image = url.toString();
+                            User.ImageType = "avatar";
                             reference.child(User.Name).child("image").setValue(User.Image );
+                            reference.child(User.Name).child("imageType").setValue(User.ImageType );
                             Picasso.get().load(selectedUri).into(imageView);
                         }
                     })

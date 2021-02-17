@@ -31,12 +31,6 @@
             android:layout_height="wrap_content"
             android:text="Use gravatar" />
 
-        <Button
-            android:id="@+id/avatarButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Use ur avatar" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -50,10 +50,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 reference.child(inputEmail).child("name").setValue(inputName);
                 reference.child(inputEmail).child("email").setValue(inputEmail);
                 reference.child(inputEmail).child("image").setValue("");
+                reference.child(inputEmail).child("imageType").setValue("");
                 reference.child(inputEmail).child("password").setValue(inputPassword);
                 reference.child(inputEmail).child("statistics").child("wins").setValue("0");
                 reference.child(inputEmail).child("statistics").child("games").setValue("0");
-                User user = new User(inputName, inputEmail, inputPassword, "", "0", "0");
+                User user = new User(inputName, inputEmail, inputPassword, "","", "0", "0");
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }

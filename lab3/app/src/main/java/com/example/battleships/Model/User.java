@@ -7,6 +7,7 @@ public class User {
     public static String Email;
     public static String Password;
     public static String Image;
+    public static String ImageType;
     public static String Games;
     public static String Wins;
     public static String Rank;
@@ -18,10 +19,11 @@ public class User {
     public static String EnemyRank;
     public static String EnemyStatus;
 
-    public User(String name, String email, String password, String image, String games, String wins) {
+    public User(String name, String email, String password, String imageType, String image, String games, String wins) {
         Name = name;
         Email = email;
         Password = password;
+        ImageType = imageType;
         Image = image;
         Wins = wins;
         Games = games;
