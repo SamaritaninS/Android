@@ -1,3 +1,2 @@
-# Лабы по ППО
-Студент: Самсонов В.Э.
-Группа: 853503
+# Android Lab 1
+Calculator and Converter
