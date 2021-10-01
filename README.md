@@ -1,3 +1,3 @@
-# Лабы по ППО
-Студент: Самсонов В.Э.
-Группа: 853503
+#Android
+##Labs software for android in Java language
+
