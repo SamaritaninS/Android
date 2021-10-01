@@ -1,3 +1,2 @@
-# Лабы по ППО
-Студент: Самсонов В.Э.
-Группа: 853503
+# Android Labs
+Timers for training - workout timers with various functions
